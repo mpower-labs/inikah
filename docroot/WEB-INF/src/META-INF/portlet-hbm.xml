@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.inikah.slayer.model.Bridge" />
+	<import class="com.inikah.slayer.model.MMCity" />
+	<import class="com.inikah.slayer.model.MMRegion" />
+	<import class="com.inikah.slayer.model.Profile" />
+	<class name="com.inikah.slayer.model.impl.MMCityImpl" table="inikah_MMCity">
+		<cache usage="read-write" />
+		<id name="cityId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="regionId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.inikah.slayer.model.impl.MMRegionImpl" table="inikah_MMRegion">
+		<cache usage="read-write" />
+		<id name="regionId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="countryId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="isoCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+	<class name="com.inikah.slayer.model.impl.ProfileImpl" table="inikah_Profile">
+		<cache usage="read-write" />
+		<id name="profileId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="ownerLastLogin" type="org.hibernate.type.TimestampType" />
+		<property name="createdFor" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="profileName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="profileCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="bride" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="maritalStatus" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="bornOn" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="reMarriageReasons" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hasChildren" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="sons" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="daughters" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="height" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="weight" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="complexion" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="motherTongue" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="emailAddress" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone1" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="phone2" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="residingCountry" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="residingState" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="residingCity" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="residingArea" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="nearbyMasjid" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="education" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="educationDetail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="religiousEducation" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="religiousEducationDetail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="profession" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="professionDetail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="organization" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="currency" type="com.liferay.portal.dao.orm.hibernate.IntegerType" column="currency_" />
+		<property name="monthlyIncome" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="countryOfBirth" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="stateOfBirth" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="cityOfBirth" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="community" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="ethnicity" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="canSpeak" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="description" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="expectation" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="hobbies" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="physicallyChallenged" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="physicallyChallengedDetails" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="performedHaj" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="revertedToIslam" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="muslimSince" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="hasNoFather" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="hasNoMother" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

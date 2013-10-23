@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.inikah.slayer.service.BridgeService" class="com.inikah.slayer.service.impl.BridgeServiceImpl" />
+	<bean id="com.inikah.slayer.service.MMCityLocalService" class="com.inikah.slayer.service.impl.MMCityLocalServiceImpl" />
+	<bean id="com.inikah.slayer.service.MMCityService" class="com.inikah.slayer.service.impl.MMCityServiceImpl" />
+	<bean id="com.inikah.slayer.service.persistence.MMCityPersistence" class="com.inikah.slayer.service.persistence.MMCityPersistenceImpl" parent="basePersistence" />
+	<bean id="com.inikah.slayer.service.MMRegionLocalService" class="com.inikah.slayer.service.impl.MMRegionLocalServiceImpl" />
+	<bean id="com.inikah.slayer.service.MMRegionService" class="com.inikah.slayer.service.impl.MMRegionServiceImpl" />
+	<bean id="com.inikah.slayer.service.persistence.MMRegionPersistence" class="com.inikah.slayer.service.persistence.MMRegionPersistenceImpl" parent="basePersistence" />
+	<bean id="com.inikah.slayer.service.ProfileLocalService" class="com.inikah.slayer.service.impl.ProfileLocalServiceImpl" />
+	<bean id="com.inikah.slayer.service.ProfileService" class="com.inikah.slayer.service.impl.ProfileServiceImpl" />
+	<bean id="com.inikah.slayer.service.persistence.ProfilePersistence" class="com.inikah.slayer.service.persistence.ProfilePersistenceImpl" parent="basePersistence" />
+</beans>

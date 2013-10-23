@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.inikah.slayer.model.MMCity">
+		<field name="cityId" type="long" />
+		<field name="regionId" type="long" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.inikah.slayer.model.MMRegion">
+		<field name="regionId" type="long" />
+		<field name="countryId" type="long" />
+		<field name="isoCode" type="String" />
+		<field name="name" type="String" />
+	</model>
+	<model name="com.inikah.slayer.model.Profile">
+		<field name="profileId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="groupId" type="long" />
+		<field name="ownerLastLogin" type="Date" />
+		<field name="createdFor" type="int" />
+		<field name="profileName" type="String" />
+		<field name="profileCode" type="String" />
+		<field name="bride" type="boolean" />
+		<field name="maritalStatus" type="int" />
+		<field name="bornOn" type="int" />
+		<field name="reMarriageReasons" type="String" />
+		<field name="hasChildren" type="boolean" />
+		<field name="sons" type="int" />
+		<field name="daughters" type="int" />
+		<field name="height" type="int" />
+		<field name="weight" type="int" />
+		<field name="complexion" type="int" />
+		<field name="motherTongue" type="int" />
+		<field name="emailAddress" type="String" />
+		<field name="phone1" type="String" />
+		<field name="phone2" type="String" />
+		<field name="residingCountry" type="long" />
+		<field name="residingState" type="long" />
+		<field name="residingCity" type="long" />
+		<field name="residingArea" type="String" />
+		<field name="nearbyMasjid" type="String" />
+		<field name="education" type="int" />
+		<field name="educationDetail" type="String" />
+		<field name="religiousEducation" type="int" />
+		<field name="religiousEducationDetail" type="String" />
+		<field name="profession" type="int" />
+		<field name="professionDetail" type="String" />
+		<field name="organization" type="String" />
+		<field name="currency" type="int" />
+		<field name="monthlyIncome" type="int" />
+		<field name="countryOfBirth" type="long" />
+		<field name="stateOfBirth" type="long" />
+		<field name="cityOfBirth" type="long" />
+		<field name="community" type="int" />
+		<field name="ethnicity" type="int" />
+		<field name="canSpeak" type="String" />
+		<field name="description" type="String" />
+		<field name="expectation" type="String" />
+		<field name="hobbies" type="String" />
+		<field name="physicallyChallenged" type="boolean" />
+		<field name="physicallyChallengedDetails" type="String" />
+		<field name="performedHaj" type="boolean" />
+		<field name="revertedToIslam" type="boolean" />
+		<field name="muslimSince" type="int" />
+		<field name="hasNoFather" type="boolean" />
+		<field name="hasNoMother" type="boolean" />
+		<field name="status" type="int" />
+	</model>
+</model-hints>

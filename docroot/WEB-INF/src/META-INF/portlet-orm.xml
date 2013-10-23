@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.inikah.slayer.model.impl.MMCityModelImpl">
+		<attributes>
+			<id name="cityId" />
+			<basic name="regionId" />
+			<basic name="name" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.inikah.slayer.model.impl.MMRegionModelImpl">
+		<attributes>
+			<id name="regionId" />
+			<basic name="countryId" />
+			<basic name="isoCode" />
+			<basic name="name" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<mapped-superclass class="com.inikah.slayer.model.impl.ProfileModelImpl">
+		<attributes>
+			<id name="profileId" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="groupId" />
+			<basic name="ownerLastLogin">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="createdFor" />
+			<basic name="profileName" />
+			<basic name="profileCode" />
+			<basic name="bride" />
+			<basic name="maritalStatus" />
+			<basic name="bornOn" />
+			<basic name="reMarriageReasons" />
+			<basic name="hasChildren" />
+			<basic name="sons" />
+			<basic name="daughters" />
+			<basic name="height" />
+			<basic name="weight" />
+			<basic name="complexion" />
+			<basic name="motherTongue" />
+			<basic name="emailAddress" />
+			<basic name="phone1" />
+			<basic name="phone2" />
+			<basic name="residingCountry" />
+			<basic name="residingState" />
+			<basic name="residingCity" />
+			<basic name="residingArea" />
+			<basic name="nearbyMasjid" />
+			<basic name="education" />
+			<basic name="educationDetail" />
+			<basic name="religiousEducation" />
+			<basic name="religiousEducationDetail" />
+			<basic name="profession" />
+			<basic name="professionDetail" />
+			<basic name="organization" />
+			<basic name="currency">
+				<column name="CURRENCY_" />
+			</basic>
+			<basic name="monthlyIncome" />
+			<basic name="countryOfBirth" />
+			<basic name="stateOfBirth" />
+			<basic name="cityOfBirth" />
+			<basic name="community" />
+			<basic name="ethnicity" />
+			<basic name="canSpeak" />
+			<basic name="description" />
+			<basic name="expectation" />
+			<basic name="hobbies" />
+			<basic name="physicallyChallenged" />
+			<basic name="physicallyChallengedDetails" />
+			<basic name="performedHaj" />
+			<basic name="revertedToIslam" />
+			<basic name="muslimSince" />
+			<basic name="hasNoFather" />
+			<basic name="hasNoMother" />
+			<basic name="status" />
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.inikah.slayer.model.impl.MMCityImpl" name="MMCity">
+		<table name="inikah_MMCity" />
+		<attributes />
+	</entity>
+	<entity class="com.inikah.slayer.model.impl.MMRegionImpl" name="MMRegion">
+		<table name="inikah_MMRegion" />
+		<attributes />
+	</entity>
+	<entity class="com.inikah.slayer.model.impl.ProfileImpl" name="Profile">
+		<table name="inikah_Profile" />
+		<attributes />
+	</entity>
+</entity-mappings>
